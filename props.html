@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                background-color: #A4E6E2;
+                color: #333;
+                font-family: sans-serif;
+            }
+
+            .container {
+                background-color: #DAC05F;
+                display:flex;
+                padding:20px;
+            }
+
+            .item {
+                background-color: #B6DCDF;
+                height:100px;
+                width:100px;
+                position: relative;
+                padding:10px;
+                box-sizing: border-box
+            }
+
+            .item:after {
+                content:'1';
+                position: absolute;
+                top:10px;
+                right:10px;
+                font-size:50px;
+                color: rgba(0,0,0,0.3);
+                font-family: sans-serif;
+            }
+
+            .item:nth-child(2) {
+                background-color: #E8EFC5;
+                height:150px;
+            }
+
+            .item:nth-child(2):after {
+                content:'2';
+            }
+
+            .item:nth-child(3) {
+                background-color: #FFFDBA;
+                height:70px;
+            }
+
+            .item:nth-child(3):after {
+                content:'3';
+            }
+
+            .item:nth-child(4) {
+                background-color: #90510C;
+                height:200px;
+            }
+
+            .item:nth-child(4):after {
+                content:'4';
+            }
+
+            h2 {
+                font-family: monospace;
+            }
+            li {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            hr {
+                margin:400px 0;
+                border:0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Flexbox</h1>
+
+
+
+
+
+
+        <section class="flex-direction">
+            <h2>flex-direction</h2>
+            <ul>
+                <li 
+                    data-onelement=".flex-direction .container" 
+                    data-setstyle="flex-direction: row;">row (default)</li>
+                <li
+                    data-onelement=".flex-direction .container" 
+                    data-setstyle="flex-direction: row-reverse;">row-reverse</li>
+                <li
+                    data-onelement=".flex-direction .container" 
+                    data-setstyle="flex-direction: column;">column</li>
+                <li
+                    data-onelement=".flex-direction .container" 
+                    data-setstyle="flex-direction: column-reverse;">column-reverse</li>
+            </ul>
+
+            <div class="container">
+                <div class="item">
+                </div>
+                <div class="item">
+                </div>
+                <div class="item">
+                </div>
+                <div class="item">
+                </div>
+            </div>
+        </section>
+        <hr />
+
+
+
+
+
+        <section class="flex-wrap">
+            <h2>flex-wrap</h2>
+            <style>
+                .flex-wrap .container {
+                    width:200px;
+                }
+            </style>
+            <ul>
+                <li 
+                    data-onelement=".flex-wrap .container" 
+                    data-setstyle="flex-wrap: nowrap;">nowrap (default)</li>
+                <li
+                    data-onelement=".flex-wrap .container" 
+                    data-setstyle="flex-wrap: wrap;">wrap</li>
+                <li
+                    data-onelement=".flex-wrap .container" 
+                    data-setstyle="flex-wrap: wrap-reverse;">wrap-reverse</li>
+            </ul>
+
+            <div class="container">
+                <div class="item">
+                </div>
+                <div class="item">
+                </div>
+                <div class="item">
+                </div>
+                <div class="item">
+                </div>
+            </div>
+        </section>
+        <hr />
+
+
+
+
+
+        <section class="justify-content">
+            <h2>justify-content</h2>
+            <ul>
+                <li 
+                    data-onelement=".justify-content .container" 
+                    data-setstyle="justify-content: flex-start;">flex-start (default)</li>
+                <li
+                    data-onelement=".justify-content .container" 
+                    data-setstyle="justify-content: flex-end;">flex-end</li>
+                <li
+                    data-onelement=".justify-content .container" 
+                    data-setstyle="justify-content: center;">center</li>
+                <li
+                    data-onelement=".justify-content .container" 
+                    data-setstyle="justify-content: space-between;">space-between</li>
+                <li
+                    data-onelement=".justify-content .container" 
+                    data-setstyle="justify-content: space-around;">space-around</li>
+            </ul>
+
+            <div class="container">
+                <div class="item">
+                </div>
+                <div class="item">
+                </div>
+                <div class="item">
+                </div>
+                <div class="item">
+                </div>
+            </div>
+        </section>
+        <hr />
+
+
+
+
+
+        <section class="align-items">
+            <h2>align-items</h2>
+            <style>
+                .align-items .container .item {
+                    height:auto;
+                }
+            </style>
+            <ul>
+                <li 
+                    data-onelement=".align-items .container" 
+                    data-setstyle="align-items: flex-start;">flex-start</li>
+                <li
+                    data-onelement=".align-items .container" 
+                    data-setstyle="align-items: flex-end;">flex-end</li>
+                <li
+                    data-onelement=".align-items .container" 
+                    data-setstyle="align-items: center;">center</li>
+                <li
+                    data-onelement=".align-items .container" 
+                    data-setstyle="align-items: stretch;">stretch (default)</li>
+                <li
+                    data-onelement=".align-items .container" 
+                    data-setstyle="align-items: baseline;">baseline</li>
+            </ul>
+
+            <div class="container">
+                <div class="item">
+                    <h1>test</h1>
+                    <h1>test</h1>
+                </div>
+                <div class="item">
+                    <h5>test</h5>
+                </div>
+                <div class="item">
+                    <h6>test</h6>
+                </div>
+                <div class="item">
+                    <h2>test</h2>
+                </div>
+            </div>
+        </section>
+        <hr />
+
+
+
+
+
+        <section class="align-content">
+            <h2>align-content</h2>
+            <style>
+                .align-content .container {
+                    width:200px;
+                    height:500px;
+                    flex-wrap:wrap;
+                }
+                .align-content .container .item {
+                    height:auto;
+                }
+            </style>
+            <ul>
+                <li 
+                    data-onelement=".align-content .container" 
+                    data-setstyle="align-content: flex-start;">flex-start</li>
+                <li
+                    data-onelement=".align-content .container" 
+                    data-setstyle="align-content: flex-end;">flex-end</li>
+                <li
+                    data-onelement=".align-content .container" 
+                    data-setstyle="align-content: center;">center</li>
+                <li
+                    data-onelement=".align-content .container" 
+                    data-setstyle="align-content: stretch;">stretch (default)</li>
+                <li
+                    data-onelement=".align-content .container" 
+                    data-setstyle="align-content: space-between;">space-between</li>
+                <li
+                    data-onelement=".align-content .container" 
+                    data-setstyle="align-content: space-around;">space-around</li>
+            </ul>
+
+            <div class="container">
+                <div class="item">
+                    <h1>test</h1>
+                    <h1>test</h1>
+                </div>
+                <div class="item">
+                    <h5>test</h5>
+                </div>
+                <div class="item">
+                    <h6>test</h6>
+                </div>
+                <div class="item">
+                    <h2>test</h2>
+                </div>
+            </div>
+        </section>
+        <hr />
+
+
+
+
+
+        <section class="order">
+            <h2>order</h2>
+            <div class="container">
+                <div class="item" style="order:2">
+                    order:2;
+                </div>
+                <div class="item" style="order:7">
+                    order:7;
+                </div>
+                <div class="item" style="order:-1">
+                    order:-1;
+                </div>
+                <div class="item" style="order:1">
+                    order:1;
+                </div>
+            </div>
+        </section>
+        <hr />
+
+
+
+
+
+        <section class="flex-grow">
+            <h2>flex-grow</h2>
+            <div class="container">
+                <div class="item" style="flex-grow:2">
+                    flex-grow:2
+                </div>
+                <div class="item" style="flex-grow:3">
+                    flex-grow:3
+                </div>
+                <div class="item" style="flex-grow:-1">
+                    flex-grow:-1
+                </div>
+                <div class="item" style="flex-grow:1">
+                    flex-grow:1
+                </div>
+            </div>
+        </section>
+        <hr />
+
+
+
+
+
+        <section class="flex-shrink">
+            <h2>flex-shrink</h2>
+            <style>
+                .flex-shrink .item {
+                    width:200px;
+                }
+            </style>
+            <div class="container">
+                <div class="item" style="flex-shrink:2">
+                    flex-shrink:2
+                </div>
+                <div class="item" style="flex-shrink:3">
+                    flex-shrink:3
+                </div>
+                <div class="item" style="flex-shrink:0">
+                    flex-shrink:0
+                </div>
+                <div class="item" style="flex-shrink:1">
+                    flex-shrink:1
+                </div>
+            </div>
+        </section>
+        <hr />
+
+
+
+
+
+        <section class="flex-basis">
+            <h2>flex-basis</h2>
+            <div class="container">
+                <div class="item" style="flex-basis:25%;">
+                    flex-basis:25%
+                </div>
+                <div class="item" style="flex-basis:80px;">
+                    flex-basis:80px
+                </div>
+                <div class="item" style="flex-basis:10em;">
+                    flex-basis:10em
+                </div>
+                <div class="item" style="flex-basis:100%;flex-grow:1">
+                    flex-basis:auto<br/>
+                    flex-grow:1
+                </div>
+            </div>
+        </section>
+        <hr />
+
+
+
+
+
+        <section class="align-self">
+            <h2>align-self</h2>
+            <div class="container">
+                <div class="item">
+
+                </div>
+                <div class="item" style="align-self:center">
+                    align-self:center
+                </div>
+                <div class="item" style="align-self:flex-end">
+                    align-self:flex-end
+                </div>
+                <div class="item">
+
+                </div>
+            </div>
+        </section>
+        <hr />
+
+
+
+
+        <script>
+            var elements = document.querySelectorAll("[data-setstyle]");
+            [].forEach.call(elements, function(element) {
+                element.addEventListener("click", function(event) {
+                    var element = document.querySelector(event.target.dataset.onelement);
+                    var style = event.target.dataset.setstyle;
+                    element.style.cssText = style;
+                });
+            });
+        </script>
+    </body>
+</html>
